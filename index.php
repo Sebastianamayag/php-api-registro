@@ -30,9 +30,10 @@ $link = Conectarse($host,$puerto,$user,$pw,$db);
 	$nombre = $_POST['nombre'];
 	$apellido= $_POST['apellido'];
 	$correo= $_POST['correo'];
-	$pass = $_POST['password'];
+	$pass = $_POST['pass'];
 
-
-	$connect->query("INSERT INTO usuarios (idusuarios,nombre,apellido,correo,pass) VALUES ('".$idusuarios."','".$nombre."','".$apellido."','".$correo."','".$password."')")
+	$query="INSERT INTO usuarios (idusuarios,nombre,apellido,correo,pass) VALUES ('".$idusuarios."','".$nombre."','".$apellido."','".$correo."','".$pass."')";
+    $result = mysqli_query($link,$query);
+	//$connect->query("INSERT INTO usuarios (idusuarios,nombre,apellido,correo,pass) VALUES ('".$idusuarios."','".$nombre."','".$apellido."','".$correo."','".$pass."')");
 	}
 ?>
