@@ -34,6 +34,7 @@ $link = Conectarse($host,$puerto,$user,$pw,$db);
 
 	$query="INSERT INTO usuarios (idusuarios,nombre,apellido,correo,pass) VALUES ('".$idusuarios."','".$nombre."','".$apellido."','".$correo."','".$pass."')";
     $result = mysqli_query($link,$query);
+    header("HTTP/1.1 200 OK");
 	//$connect->query("INSERT INTO usuarios (idusuarios,nombre,apellido,correo,pass) VALUES ('".$idusuarios."','".$nombre."','".$apellido."','".$correo."','".$pass."')");
 	}
 ?>
